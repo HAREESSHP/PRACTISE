@@ -1,0 +1,26 @@
+li=[12,34,23,45,23,45]
+sceen=set(li)
+print(sceen)
+
+li=[12,34,23,34,23]
+sceen=set(li)
+if li==set:
+    print(True)
+else:
+    print(False)
+
+li=[12,23,23,45,34,32]
+sceen=set(li)
+print(len(sceen))
+
+li=[12,23,34,223,21,34]
+s1=set(li)
+l=[12,23,45,23]
+s2=set(l)
+print(s1&s2)
+
+li=[12,23,34,223,21,34]
+s1=set(li)
+l=[12,23,45,23]
+s2=set(l)
+print(s1&s2)
