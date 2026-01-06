@@ -15,12 +15,12 @@ print(len(sceen))
 
 li=[12,23,34,223,21,34]
 s1=set(li)
-l=[12,23,45,23]
-s2=set(l)
+list=[12,23,45,23]
+s2=set(list)
 print(s1&s2)
 
 li=[12,23,34,223,21,34]
 s1=set(li)
-l=[12,23,45,23]
-s2=set(l)
+list=[12,23,45,23]
+s2=set(list)
 print(s1&s2)
