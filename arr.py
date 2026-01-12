@@ -116,3 +116,10 @@ for i in range(len(li)):
         if li[i]==li[j]:
              print(li[i])
 print("*************************************************")
+
+li=[12,13,22,44,56,12,22]                   #removing duplicates with out method
+sceen={}
+for i in li:
+    if i not in sceen:
+     sceen.append(i)
+print(sceen)
