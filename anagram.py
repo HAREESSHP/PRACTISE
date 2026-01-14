@@ -9,3 +9,9 @@ class Solution(object):                          #anagram problem
         return True
 __import__("atexit").register(lambda: open("display_runtime.txt", "w").write("0")) 
 
+def str(s):
+    cha=set(s)
+    if len(cha)==len(s):
+        return True
+    else:
+        return False
