@@ -6,7 +6,7 @@ def secound(li):                            #secound largest element
             secmax=max
             max=i
     return max,secmax
-li=[12,34,23,45,65,78,34]
+li=[12,24,25,65,58]
 result=secound(li)
 print(f"the two largest elements are:{result}")
 print("*************************************************")
