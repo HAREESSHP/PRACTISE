@@ -2,7 +2,7 @@ li=[12,34,23,45,23,45]
 sceen=set(li)
 print(sceen)
 
-li=[12,34,23,34,23]
+li=[1,12,23,25,58,42,16]
 sceen=set(li)
 if li == sceen:
     print(True)
