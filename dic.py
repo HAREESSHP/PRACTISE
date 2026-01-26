@@ -43,5 +43,10 @@ def dic(s):
     print(d2)
 s="hareesh"
 dic(s)
-
+student = {
+    "name": "Alice",
+    "age": 23,
+}
+print(student["name"])
+print(student.get("age"))
 
