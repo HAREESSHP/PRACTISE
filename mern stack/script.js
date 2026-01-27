@@ -25,3 +25,16 @@ if(gradee>=90){
 console.log("End of the program.");
 const ag="25";
 ag>=18 ? console.log("You are an adult.") : console.log("You are a minor.");
+
+// looping statemets
+for(let i=0;i<=5;i++){    //for loop
+    console.log("rohan",i);
+}
+count=0;
+while(count<5){
+    console.log("count value is:",count);
+    count++;
+    if(count===3){
+        break;
+    }
+}
