@@ -38,3 +38,9 @@ while(count<5){
         break;
     }
 }
+
+function sum(a,b){
+    sum=(a+b);
+    return sum;
+}
+console.log(sum(5,10));
