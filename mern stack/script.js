@@ -46,24 +46,71 @@ function sum(a,b){
 console.log(sum(5,10));
 
 // ananymous function
-const greet = function(){
-    console.log("Hello from anonymous function");
-}
-greet();
+// const greet = function(){
+//     console.log("Hello from anonymous function");
+// }
+// greet();
 
-// arrow function in Es6
-const greet1=()=>{
-    console.log("Hello from arrow function");
-}
-greet1();
+// // arrow function in Es6
+// const greet1=()=>{
+//     console.log("Hello from arrow function");
+// }
+// greet1();
 
 // arrow function cocepts
-const squ=(n)=> n*n;
-console.log(squ(5));
+// const squ=(n)=> n*n;
+// console.log(squ(5));
 
-const calulate=(a,d,operation)=>{
-    return operation(a,d);
+// const calulate=(a,d,operation)=>{
+//     return operation(a,d);
+// }
+// console.log(calulate(10,5,(x,y)=>x+y)); // addition
+// console.log(calulate(10,5,(x,y)=>x-y)); // subtraction
+
+// console.log("one")
+// console.log("two")
+// console.log("three")
+// //content related to synchorinazition
+// setTimeout(function(){
+//     console.log("four")
+// },3000);
+
+// function getCandies(){
+//     setTimeout(function(){
+//         console.log("Here are your candies!")
+//     },5000);
+// }
+// getCandies();
+// // call back function example
+// function gree(name,callback){
+//     console.log("hello",name);
+//     callback();
+// }
+// function saybye(){
+//     console.log("bye!");
+// }
+// gree("hari",saybye);
+// promise example with synchorinization
+const ticket=new Promise(function(res,rej){
+    const seatAvailable=true;
+    if(seatAvailable){
+        res("Ticket booked successfully!");
+    }else{
+        rej("Ticket booking failed. No seats available.");
+    }
+})
+ticket.then((data)=>{
+    console.log("on success:",data );
+}).catch((data)=>{
+    console.log("on failure:",data);
+});
+
+// async await example
+function getCandies(){
+    return new Promise((res,rej) =>{
+         setTimeout(()=>{
+            res("Here are your candies!");
+        },3000);
+    });
 }
-console.log(calulate(10,5,(x,y)=>x+y)); // addition
-console.log(calulate(10,5,(x,y)=>x-y)); // subtraction
-
+console.log(getCandies());
