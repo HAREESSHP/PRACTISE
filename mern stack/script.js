@@ -128,4 +128,32 @@ box4.style.color="white";
 const h1=document.getElementsByTagName("h1");
  console.log(h1);
 
+ //modifiying html page
+ // inner html
+ const box=document.getElementById("box-1");
+  box.innerHTML="<h2>Modified Box 1</h2>";
+
+ //inner text 
+ const box1=document.getElementById("box-2");
+  box1.innerText="Modified Box 2";
+
+document.getElementById("box-3").innerText="Modified Box 3";
+
+document.getElementsByTagName("p").innerText="hi";
+
+const newpara=document.createElement("p");
+newpara.innerText="This is a new paragraph added by Javascript.";
+document.body.appendChild(newpara);
+newpara.classList.add("container")
+
+function onclickFunction(){
+    alert("Box 1 clicked");
+}
  
+//event listeners in javascript
+const container= document.getElementsByClassName('box');
+for (let i = 0; i < container.length; i++) {
+container[i].addEventListener('click',function(){
+    alert("Container clicked");
+});
+}
