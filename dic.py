@@ -50,3 +50,8 @@ student = {
 print(student["name"])
 print(student("age"))
 
+s="hareesh"
+fre={}
+for s in s:
+    fre[s]=fre.get(s,0)+1
+print(fre)
