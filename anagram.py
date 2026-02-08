@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution(object):                          #anagram problem
     def isAnagram(self, s, t):
         if len(s) != len(t):
@@ -15,3 +18,12 @@ def str(s):
         return True
     else:
         return False
+    
+//prefix sum of an array
+    def runningSum(self, nums: List[int]) -> List[int]:
+        n=len(nums)
+        prefixsum=[0]*n
+        prefixsum[0]=nums[0]
+        for i in range (1,len(nums)):
+            prefixsum[i]=prefixsum[i-1]+nums[i]
+        return prefixsum
