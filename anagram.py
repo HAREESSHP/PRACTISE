@@ -20,7 +20,7 @@ def str(s):
         return False
     
 //prefix sum of an array
-    def runningSum(self, nums: List[int]) -> List[int]:
+def runningSum(self, nums: List[int]) -> List[int]:
         n=len(nums)
         prefixsum=[0]*n
         prefixsum[0]=nums[0]
