@@ -21,9 +21,9 @@ def str(s):
     
 //prefix sum of an array
 def runningSum(self, nums: List[int]) -> List[int]:
-        n=len(nums)
-        prefixsum=[0]*n
-        prefixsum[0]=nums[0]
+    n=len(nums)
+    prefixsum=[0]*n
+    prefixsum[0]=nums[0]
         for i in range (1,len(nums)):
             prefixsum[i]=prefixsum[i-1]+nums[i]
         return prefixsum
