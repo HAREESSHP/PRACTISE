@@ -30,7 +30,7 @@ def str(s):
             curr += num
             if curr - k in seen:
                 count += seen[curr - k]
-            seen[curr] = seen.get(curr, 0) + 1
+            seen[curr]= seen.get(curr, 0) + 1
         
         return count
 
