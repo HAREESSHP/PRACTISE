@@ -32,6 +32,22 @@ def str(s):
                 count += seen[curr - k]
             seen[curr]= seen.get(curr, 0) + 1
         
+
         return count
+    # pivot element
+    class Solution(object):
+    def pivotIndex(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        total=sum(nums)
+        lf=0
+        for i in range(len(nums)):
+            if lf==total-lf-nums[i]:
+                return i
+            lf=lf+nums[i]
+        return -1
+
 
 
