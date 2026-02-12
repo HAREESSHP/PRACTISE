@@ -50,4 +50,14 @@ def str(s):
         return -1
 
 
+class NumArray:
 
+    def __init__(self, nums: List[int]):
+        self.nums = nums
+        
+
+    def sumRange(self, left: int, right: int) -> int:
+        summe = 0
+        for i in self.nums[left:right+1]:
+            summe += i
+        return summe
