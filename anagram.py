@@ -57,7 +57,7 @@ class NumArray:
         
 
     def sumRange(self, left: int, right: int) -> int:
-        summe = 0
+        summ = 0
         for i in self.nums[left:right+1]:
-            summe += i
-        return summe
+            summ += i
+        return summ
