@@ -145,6 +145,7 @@ class Solution(object):
         """
         l=0
         r=len(numbers)-1
+        cs=0
         while l<r:
             cs=numbers[l]+numbers[r]
             if cs == target:
