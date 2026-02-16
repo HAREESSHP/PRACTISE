@@ -154,3 +154,18 @@ class Solution(object):
                 l=l+1
             else:
                 r=r-1
+#User function Template for python3
+
+
+    def findMinDiff(self, arr, M):
+        n = len(arr)
+        if M == 0 or n == 0:
+            return 0
+        if M > n:
+            return -1
+        arr.sort()
+        min_diff = float('inf')
+        for i in range(n - M + 1):
+            diff = arr[i + M - 1] - arr[i]
+            min_diff = min(min_diff, diff)
+        return min_diff
