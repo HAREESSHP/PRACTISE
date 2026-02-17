@@ -135,9 +135,8 @@ for i in range(n):
     for k in range(i+1):
         print(" ", end="")
     print() 
-
-class Solution(object):
-    def twoSum(self, numbers, target):
+print("*************************************************")
+def twoSum(self, numbers, target):   
         """
         :type numbers: List[int]
         :type target: int
@@ -153,10 +152,9 @@ class Solution(object):
                 l=l+1
             else:
                 r=r-1
+print("*************************************************")
 #User function Template for python3
-
-
-    def findMinDiff(self, arr, M):
+def findMinDiff(self, arr, M):
         n = len(arr)
         if M == 0 or n == 0:
             return 0
@@ -168,3 +166,24 @@ class Solution(object):
             diff = arr[i + M - 1] - arr[i]
             min_diff = min(min_diff, diff)
         return min_diff
+print("*************************************************")
+
+
+def overlapInt(self, arr):
+        # code here
+        n = len(arr)
+        start = sorted([i[0] for i in arr])
+        end   = sorted([i[1] for i in arr])
+        active =0
+        i=j=0
+        max_active=0
+        while i < n and j < n:
+                if start[i]<=end[j]:
+                  active=active+1
+                  max_active=max(max_active,active)
+                  i=i+1
+                else:
+                    active =active- 1
+                    j =j+ 1
+        return max_active
+print("***********************************************")   
