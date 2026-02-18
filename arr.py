@@ -187,3 +187,14 @@ def overlapInt(self, arr):
                     j =j+ 1
         return max_active
 print("***********************************************")   
+
+
+def inversionCount(self, arr):
+        # Code Here
+        count=0
+        n=len(arr)
+        for i in range (n):
+            for j in range(i+1,n):
+                if arr[i]>arr[j]:
+                    count=count+1
+        return count
