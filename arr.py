@@ -205,4 +205,14 @@ def missingRange(self, arr, low, high):
         s=set(range(low,high+1))
         s2={x for x in arr if low<= x <= high}
         return sorted(s-s2)
-        
+print("*************************************************")
+
+
+def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        num = int(''.join(map(str, digits)))
+        num += 1                              
+        return list(map(int, str(num))) 
