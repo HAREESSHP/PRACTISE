@@ -198,3 +198,11 @@ def inversionCount(self, arr):
                 if arr[i]>arr[j]:
                     count=count+1
         return count
+print
+        
+def missingRange(self, arr, low, high):
+        #code here
+        s=set(range(low,high+1))
+        s2={x for x in arr if low<= x <= high}
+        return sorted(s-s2)
+        
