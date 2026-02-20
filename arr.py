@@ -216,3 +216,11 @@ def plusOne(self, digits):
         num = int(''.join(map(str, digits)))
         num += 1                              
         return list(map(int, str(num))) 
+
+
+def findLargest(self, arr):
+	    # code here
+	    arr = list(map(str, arr))
+	    arr.sort(key=lambda x: x*10, reverse=True)
+	    result = ''.join(arr)
+    	return "0" if result[0] == '0' else result
