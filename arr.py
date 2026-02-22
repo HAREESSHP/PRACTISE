@@ -224,3 +224,16 @@ def findLargest(self, arr):
 	    arr.sort(key=lambda x: x*10, reverse=True)
 	    result = ''.join(arr)
     	return "0" if result[0] == '0' else result
+#h-index
+
+def hIndex(self, citations):
+        #code here
+        h=0
+        citations.sort(reverse=True)
+        for i in range(len(citations)):
+            if citations[i]>=i+1:
+                h=i+1
+            else:
+                break
+        return h
+        
