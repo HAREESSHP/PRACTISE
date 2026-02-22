@@ -236,4 +236,18 @@ def hIndex(self, citations):
             else:
                 break
         return h
-        
+#sub array
+
+def subarrayXor(self, arr, k):
+        # code here
+        prefix_xor = 0
+        count = 0
+        freq = {0: 1}  
+
+        for num in arr:
+            prefix_xor ^= num
+            need = prefix_xor ^ k
+            count += freq.get(need, 0)
+            freq[prefix_xor] = freq.get(prefix_xor, 0) + 1
+
+        return count
