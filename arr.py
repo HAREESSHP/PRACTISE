@@ -251,3 +251,10 @@ def subarrayXor(self, arr, k):
             freq[prefix_xor] = freq.get(prefix_xor, 0) + 1
 
         return count
+print("*******************************************************")
+
+    
+def findUnion(self, a, b):
+        # code here
+        s=set(a+b)
+        return list(s)
