@@ -218,14 +218,6 @@ def plusOne(self, digits):
         return list(map(int, str(num))) 
 
 
-def findLargest(self, arr):
-	    # code here
-	    arr = list(map(str, arr))
-	    arr.sort(key=lambda x: x*10, reverse=True)
-	    result = ''.join(arr)
-    	return "0" if result[0] == '0' else result
-#h-index
-
 def hIndex(self, citations):
         #code here
         h=0
@@ -253,8 +245,23 @@ def subarrayXor(self, arr, k):
         return count
 print("*******************************************************")
 
-    
+'''union of a list'''  
 def findUnion(self, a, b):
         # code here
         s=set(a+b)
         return list(s)
+print("*******************************************************")
+
+
+def removeDuplicates(self, nums):      #sorted array
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        k = 1  
+        for i in range(1, len(nums)):
+            if nums[i] != nums[k - 1]:
+                nums[k] = nums[i]
+                k += 1
+
+        return k
