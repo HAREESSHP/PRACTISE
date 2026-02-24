@@ -265,3 +265,26 @@ def removeDuplicates(self, nums):      #sorted array
                 k += 1
 
         return k
+print("*******************************************************")
+
+def equalSumSpan(self, a1, a2):                   #longest prefix sum
+        n = len(a1)
+        temp = [a1[i] - a2[i] for i in range(n)]
+
+        prefix_sum = 0
+        first_occurrence = {}
+        max_len = 0
+
+        for i in range(n):
+            prefix_sum += temp[i]
+
+            if prefix_sum == 0:
+                max_len = i + 1
+
+            if prefix_sum in first_occurrence:
+                max_len = max(max_len, i - first_occurrence[prefix_sum])
+            else:
+                first_occurrence[prefix_sum] = i
+
+        return max_len
+print("*******************************************************")
