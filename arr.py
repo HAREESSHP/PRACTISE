@@ -288,4 +288,16 @@ def equalSumSpan(self, a1, a2):                   #longest prefix sum
 
         return max_len
 print("*******************************************************")
-print
+
+def findMaxAverage(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: float
+        """
+        ws=sum(nums[:k])
+        maxsum=ws
+        for i in range(k,len(nums)):
+            ws=(ws-nums[i-k]+nums[i])
+            maxsum=max(maxsum,ws)
+        return ms
