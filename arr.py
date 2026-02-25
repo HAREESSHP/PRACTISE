@@ -288,3 +288,4 @@ def equalSumSpan(self, a1, a2):                   #longest prefix sum
 
         return max_len
 print("*******************************************************")
+print
