@@ -300,4 +300,5 @@ def findMaxAverage(self, nums, k):
         for i in range(k,len(nums)):
             ws=(ws-nums[i-k]+nums[i])
             maxsum=max(maxsum,ws)
-        return ms
+        return maxsum/float(k)
+print("*******************************************************")
