@@ -302,3 +302,21 @@ def findMaxAverage(self, nums, k):
             maxsum=max(maxsum,ws)
         return maxsum/float(k)
 print("*******************************************************")
+
+
+def minSubArrayLen(self, target, nums):
+        """
+        :type target: int
+        :type nums: List[int]
+        :rtype: int
+        """
+        l=0
+        cs=0
+        min_l=float('inf')
+        for right in range(len(nums)):
+            cs+=nums[right]
+            while cs>=target:
+                min_l=min(min_l,right-l+1)
+                cs-=nums[l]
+                l=l+1
+        return 0 if min_l==float('inf') else min_l
