@@ -303,7 +303,7 @@ def findMaxAverage(self, nums, k):
         return maxsum/float(k)
 print("*******************************************************")
 
-
+#min size of a sub array 
 def minSubArrayLen(self, target, nums):
         """
         :type target: int
@@ -320,3 +320,4 @@ def minSubArrayLen(self, target, nums):
                 cs-=nums[l]
                 l=l+1
         return 0 if min_l==float('inf') else min_l
+print("*******************************************************")
