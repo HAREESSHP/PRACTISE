@@ -321,3 +321,27 @@ def minSubArrayLen(self, target, nums):
                 l=l+1
         return 0 if min_l==float('inf') else min_l
 print("*******************************************************")
+
+def findClosestPair(self, arr1, arr2, x):
+        #code Here
+        i = 0
+        j = len(arr2) - 1
+        
+        min_diff = float('inf')
+        best_pair = []
+        
+        while i < len(arr1) and j >= 0:
+            current_sum = arr1[i] + arr2[j]
+            diff = abs(current_sum - x)
+
+            if diff < min_diff:
+                min_diff = diff
+                best_pair = [arr1[i], arr2[j]]
+
+            if current_sum > x:
+                j -= 1
+            else:
+                i += 1
+        
+        return best_pair
+print("*******************************************************")
