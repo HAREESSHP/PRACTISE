@@ -349,11 +349,11 @@ print("*******************************************************")
 #move all zeros to end of array
 def pushZerosToEnd(self, arr):
     # code here
-    j=0
+    k=0
     for i in range(len(arr)):
     	if arr[i]!=0:
-    	    arr[i],arr[j]= arr[j],arr[i]
-    	    j=j+1
+    	    arr[i],arr[k]= arr[k],arr[i]
+    	    k=k+1
     return arr
 print("*******************************************************")
     	
