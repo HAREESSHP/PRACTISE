@@ -228,6 +228,7 @@ def hIndex(self, citations):
             else:
                 break
         return h
+print("*******************************************************")
 #sub array
 
 def subarrayXor(self, arr, k):
