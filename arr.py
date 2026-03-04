@@ -354,3 +354,16 @@ def pushZerosToEnd(self, arr):
     return arr
 print("*******************************************************")
     	
+
+def maxSubarrayXOR(self, arr, k):
+        # code here
+        c=0
+        for i in range (k):
+            c=c^arr[i]
+            mx=c
+        for i in range (k,len(arr)):
+            c=c^arr[i - k] 
+            c=c^arr[i]
+            mx=max(c,mx)
+        return mx
+print("*******************************************************")            
