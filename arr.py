@@ -367,3 +367,24 @@ def maxSubarrayXOR(self, arr, k):
             mx=max(c,mx)
         return mx
 print("********************************************************")        
+
+#palindrome
+def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s = s.lower()
+        
+        new = ""
+        for ch in s:
+            if ch.isalnum():
+                new += ch
+        
+        rev = new[::-1]
+        
+        if new == rev:
+            return True
+        else:
+            return False
+print("*******************************************************")
