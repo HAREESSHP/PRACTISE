@@ -388,3 +388,26 @@ def isPalindrome(self, s):
         else:
             return False
 print("*******************************************************")
+
+#pythagorean triplet
+def pythagoreanTriplet(self, arr):
+    	# code here
+        n = len(arr)
+
+        arr = [x*x for x in arr]
+
+        arr.sort()
+
+        for i in range(n-1, 1, -1):
+            left = 0
+            right = i - 1
+
+            while left < right:
+                if arr[left] + arr[right] == arr[i]:
+                    return True
+                elif arr[left] + arr[right] < arr[i]:
+                    left += 1
+                else:
+                    right -= 1
+
+        return False
