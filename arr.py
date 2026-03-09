@@ -411,3 +411,16 @@ def pythagoreanTriplet(self, arr):
                     right -= 1
 
         return False
+
+
+#swapping the first and last digit
+def largestSwap(self, s):
+        #code here
+        ins=s
+        s=list(s)
+        i=0
+        j=len(s)-1
+        s[i],s[j]=s[j],s[i]
+        s="".join(s)
+        mx=max(s,ins)
+        return mx
