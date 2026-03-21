@@ -483,7 +483,5 @@ def searchRange(self, nums, target):
             return ans
         a=first(nums,target)
         b=last(nums,target)
-        list[0]=a
-        list[1]=b
-        return list
+        return [a,b]
 print("*******************************************************")
