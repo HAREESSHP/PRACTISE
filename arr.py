@@ -447,11 +447,6 @@ def search(self, nums, target):
         
 #first and last position of an element in sorted array
 def searchRange(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
         list=[-1,-1]
         def first(nums,target):
             l=0
