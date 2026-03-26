@@ -491,5 +491,4 @@ def findMin(self, nums):
             else:
                 r=mid
         return nums[l]
-
-        
+print("*******************************************************")
