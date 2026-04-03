@@ -497,6 +497,7 @@ n2=Node(20)
 n3=Node(30)
 n1.next=n2
 n2.next=n3
+n3.next=None
 temp=n1
 while temp:
     print(temp.data,end="->")
