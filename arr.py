@@ -502,3 +502,16 @@ temp=n1
 while temp:
     print(temp.data,end="->")
     temp = temp.next
+
+class Nod:
+     def __init__(self,data):
+         self.data=data
+         self.next=None
+n=Nod(30)
+n1=Nod(40)
+n2=Nod(50)
+n.next=n1
+n1.next=n2
+n2.next=None
+s=search(n,40)
+print(s)
