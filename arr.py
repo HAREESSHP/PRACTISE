@@ -508,7 +508,7 @@ class Nod:
          self.data=data
          self.next=None
 n=Nod(30)
-n1=Nod(40)
+n1=Nod(60)
 n2=Nod(50)
 n.next=n1
 n1.next=n2
