@@ -515,3 +515,22 @@ n1.next=n2
 n2.next=None
 s=search(n,40)
 print(s)
+
+class Nod:
+     def __init__(self,data):
+         self.data=data
+         self.next=None
+n=Nod(30)
+n1=Nod(60)
+n2=Nod(50)
+n.next=n1
+n1.next=n2
+n2.next=None
+def search(n,key):
+    temp=n
+    while temp:
+        if temp.data==key:
+            return True
+        temp=temp.next
+    return False
+print(search(n,50))
