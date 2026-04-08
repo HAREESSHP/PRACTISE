@@ -291,11 +291,6 @@ def equalSumSpan(self, a1, a2):                   #longest prefix sum
 print("*******************************************************")
 
 def findMaxAverage(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: float
-        """
         ws=sum(nums[:k])
         maxsum=ws
         for i in range(k,len(nums)):
@@ -369,11 +364,7 @@ def maxSubarrayXOR(self, arr, k):
 print("********************************************************")        
 
 #palindrome
-def isPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
+def isPalindrome(self, s):        #code here
         s = s.lower()
         
         new = ""
