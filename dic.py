@@ -55,3 +55,12 @@ fre={}
 for s in s:
     fre[s]=fre.get(s,0)+1
 print(fre)
+
+s="hareesh"
+t={}
+for s in s:    t[s]=t.get(s,0)+1
+print(t)
+fre={}
+for ch in s:
+    fre[ch]=fre.get(ch,0)+1
+print(fre)
