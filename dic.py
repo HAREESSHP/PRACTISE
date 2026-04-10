@@ -47,6 +47,7 @@ student = {
     "name": "Alice",
     "age": 23,
 }
+student["age"]=24
 print(student["name"])
 print(student("age"))
 
@@ -58,7 +59,8 @@ print(fre)
 
 s="hareesh"
 t={}
-for s in s:    t[s]=t.get(s,0)+1
+for s in s:
+    t[s]=t.get(s,0)+1
 print(t)
 fre={}
 for ch in s:
