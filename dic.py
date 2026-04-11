@@ -46,10 +46,12 @@ dic(s)
 student = {
     "name": "Alice",
     "age": 23,
+    "dep":"csm"
 }
 student["age"]=24
 print(student["name"])
-print(student("age"))
+print(student["age"])
+print(student["dep"])
 
 s="hareesh"
 fre={}
