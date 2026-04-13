@@ -57,4 +57,11 @@ squares=tuple(i*i for i in range(1,11))
 print(squares)
 print("****************************")
 
-    
+def secound(li):                                     #second largest element in list
+    max=0
+    secmax=0
+    for i in li:
+        if i>max:
+            secmax=max
+            max=i
+    return max,secmax 
