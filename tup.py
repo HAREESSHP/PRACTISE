@@ -64,4 +64,10 @@ def secound(li):                                     #second largest element in 
         if i>max:
             secmax=max
             max=i
-    return max,secmax 
+    return max,secmax
+
+str="medem"
+if str==str[::-1]:
+    print("palindrome") 
+else:
+    print("not palindrome")
