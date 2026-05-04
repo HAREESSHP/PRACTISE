@@ -73,3 +73,7 @@ else:
     print("not palindrome")
 
 str1="hello world"
+
+day = "may 4"
+if day=="may 4":
+    print("wish me happy birthday  to me")
