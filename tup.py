@@ -79,3 +79,12 @@ if day=="may 4":
     print("wish me happy birthday  to me")
 else:
     print("today is not my birthday")
+
+# stack
+stack=[]
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print(stack)
+stack.pop() 
+print(stack)
