@@ -95,3 +95,15 @@ stack=[]
 stack.append(1)
 stack.append(2)
 print(stack)
+
+def secinstack(s,key):
+    for i in s:
+        if i==key:
+            print("key found ")
+
+        else:
+            print("not found")
+    return -1
+s=[1,3,4,2,6]
+key=4
+print(s,key)
