@@ -95,6 +95,8 @@ stack=[]
 stack.append(1)
 stack.append(2)
 print(stack)
+stack.delete(0)
+print(stack)
 
 def secinstack(s,key):
     for i in s:
