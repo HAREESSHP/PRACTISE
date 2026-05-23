@@ -46,6 +46,17 @@ for i in range(len(lis)-1,-1,-1):
 print(rev)
 print("****************************")
 
+print("queue management system")
+stack=[]
+for i in range(0,10,1):
+    s=input("enter person name")
+    if i in range:
+        stack.append(s)
+    else:
+        stack.pop()
+        stack.append(s)
+print("excectued sucessfully")
+
 sceen=set(t3)
 print(sceen)
 if sceen == t3:

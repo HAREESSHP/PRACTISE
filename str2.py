@@ -21,3 +21,4 @@ else:
     print("no")
 print("*************************************************")
 
+name=input("enter your name ")
