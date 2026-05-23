@@ -55,7 +55,7 @@ for i in range(0,10,1):
     else:
         stack.pop()
         stack.append(s)
-print("excectued sucessfully")
+print("excectued sucessfully queue management system")
 
 sceen=set(t3)
 print(sceen)
