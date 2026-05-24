@@ -51,11 +51,12 @@ stack=[]
 for i in range(0,10,1):
     s=input("enter person name")
     if i in range:
-        stack.append(s)
+        stack.push(s)
     else:
         stack.pop()
-        stack.append(s)
+        stack.push(s)
 print("excectued sucessfully queue management system")
+print("queque handling sucessfully")
 
 sceen=set(t3)
 print(sceen)
