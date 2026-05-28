@@ -123,3 +123,4 @@ def secinstack(s,key):
 s=[1,3,4,2,6]
 key=4
 print(s,key)
+print(secinstack(s,key))
