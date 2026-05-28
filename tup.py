@@ -124,3 +124,13 @@ s=[1,3,4,2,6]
 key=4
 print(s,key)
 print(secinstack(s,key))
+
+#amstrong number
+n=int(input("Enter a number:"))
+sum=0
+temp=n
+while temp>0:
+    digit=temp%10
+    sum+=digit**3
+    temp//=10
+print(f"{n} is an amstrong number") if n==sum else print(f"{n} is not an amstrong number")
