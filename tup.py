@@ -160,3 +160,13 @@ class BinaryTree:
                 node.right=Node(data)
             else:
                 self._insert(data,node.right)
+    def inorder(self):
+        self._inorder(self.root)    
+    def _inorder(self,node):
+        if node:
+            self._inorder(node.left)
+            print(node.data,end=' ')
+            self._inorder(node.right)
+bt=BinaryTree()
+bt.insert(5) 
+bt.inorder()
