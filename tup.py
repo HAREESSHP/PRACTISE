@@ -168,5 +168,7 @@ class BinaryTree:
             print(node.data,end=' ')
             self._inorder(node.right)
 bt=BinaryTree()
-bt.insert(5) 
+bt.insert(5)
+bt.insert(6)
+bt.insert(3) 
 bt.inorder()
