@@ -170,5 +170,6 @@ class BinaryTree:
 bt=BinaryTree()
 bt.insert(5)
 bt.insert(6)
-bt.insert(3) 
+bt.insert(3)
+bt.delete() 
 bt.inorder()
