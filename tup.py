@@ -173,3 +173,12 @@ bt.insert(6)
 bt.insert(3)
 bt.delete() 
 bt.inorder()
+#sec largest
+nums=[1,2,3,4,5]
+max=0
+secmax=0
+for num in nums:
+    if num > max:
+        secmax = max
+        max = num
+print(f"Second largest number: {secmax}")
