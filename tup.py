@@ -182,3 +182,13 @@ for num in nums:
         secmax = max
         max = num
 print(f"Second largest number: {secmax}")
+
+#max of a number 
+def maxofnum(a,b,c):
+    if a>=b and a>=c:
+        return a
+    elif b>=a and b>=c:
+        return b
+    else:
+        return c
+    
