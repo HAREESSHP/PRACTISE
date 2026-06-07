@@ -39,3 +39,24 @@ class Solution(object):
                 nums[mid], nums[right] = nums[right], nums[mid]
                 right -= 1
         return nums
+#matrix diagonal sum
+class Solution(object):
+    def diagonalSum(self, mat):
+        """
+        :type mat: List[List[int]]
+        :rtype: int
+        """
+        sum=0
+        for i in range(len(mat)):
+            for j in range(len(mat)):
+                if i==j:
+                    sum=sum+mat[i][j]
+        for i in range(len(mat)):
+            for j in range(len(mat)):
+                if i+j==len(mat)-1:
+                    sum=sum+mat[i][j]
+        if len(mat) % 2 == 1:
+            k=len(mat)//2
+            sum=sum-mat[k][k]
+        return sum
+        
