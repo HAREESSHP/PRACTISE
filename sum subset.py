@@ -59,4 +59,11 @@ class Solution(object):
             k=len(mat)//2
             sum=sum-mat[k][k]
         return sum
-        
+obj=Solution()
+mat={
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+}
+result=obj.diagonalSum(mat)
+print(result)
