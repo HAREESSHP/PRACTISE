@@ -21,7 +21,7 @@ def str(s):
     
 # //leetcode 560
 
-    def subarraySum(self, nums, k):
+def subarraySum(self, nums, k):
         count = 0
         curr = 0
         seen = {0: 1}
@@ -35,7 +35,7 @@ def str(s):
 
         return count
     # pivot element
-    class Solution(object):
+class Solution(object):
     def pivotIndex(self, nums):
         
         total=sum(nums)
