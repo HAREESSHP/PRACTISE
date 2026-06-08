@@ -1,6 +1,3 @@
-
-
-
 class Solution(object):                          #anagram problem
     def isAnagram(self, s, t):
         if len(s) != len(t):
@@ -35,8 +32,8 @@ def subarraySum(self, nums, k):
 
         return count
     # pivot element
-class Solution(object):
-    def pivotIndex(self, nums):
+
+def pivotIndex(self, nums):
         
         total=sum(nums)
         lf=0

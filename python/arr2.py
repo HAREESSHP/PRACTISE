@@ -64,3 +64,20 @@ def sorting(li):                                     #sorting a list
                 li[i],li[j]=li[j],li[i]
     return li
 
+class Solution(object):
+    def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        k=k%len(nums)
+        nums.reverse()
+        nums[:k] = nums[:k][::-1]
+        nums[k:] = nums[k:][::-1]
+        return nums
+obj=Solution()
+nums=[1,2,3,4,5,6,7]
+k=3
+result=obj.rotate(nums,k)
+print(f"the rotated list is :{result}")
