@@ -15,3 +15,14 @@
     justify-content: center;
     align-items: center;
 }
+*{
+    margin: 10px;
+    padding: 10px;
+}
+h2{
+    color: red;
+    text-align: center;
+}
+#box-1{
+    color:blue;
+}

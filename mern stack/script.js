@@ -120,9 +120,9 @@ const bodyBackground=document.body;
 bodyBackground.style.backgroundColor="lightblue";
 
 // accesing by id name
-const box4=document.getElementById("box-4");
-box4.style.backgroundColor="red";
-box4.style.color="white";
+const sadvi=document.getElementById("Container");
+sadvi.style.backgroundColor="blue";
+sadvi.style.color="red";
 
 //accesing by tag name
 const h1=document.getElementsByTagName("h1");
@@ -131,7 +131,7 @@ const h1=document.getElementsByTagName("h1");
  //modifiying html page
  // inner html
  const box=document.getElementById("box-1");
-  box.innerHTML="<h2>Modified Box 1</h2>";
+  box.innerHTML="<h2>example</h2>";
 
  //inner text 
  const box1=document.getElementById("box-2");
