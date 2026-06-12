@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
+import Card from "./assets/card.jsx";
 
 function App() {
   let [count, setCount] = useState(10)
