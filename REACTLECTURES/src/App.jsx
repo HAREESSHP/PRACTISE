@@ -11,7 +11,9 @@ function App() {
   function decrement() {
     setCount(count - 1)
   }
-
+function reset() {
+  setCount(0)
+}
   return (
     <>
     <nav className='nav'>
@@ -30,6 +32,7 @@ function App() {
     <div className="buttons">
      <button className="button" onClick={increment}>INCREMENT</button>
      <button className='button' onClick={decrement}>DECREMENT</button>
+     <button className='button' onClick={reset}>RESET</button>
     </div>
     </>
   )
