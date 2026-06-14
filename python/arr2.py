@@ -81,3 +81,11 @@ nums=[1,2,3,4,5,6,7]
 k=3
 result=obj.rotate(nums,k)
 print(f"the rotated list is :{result}")
+
+class Solution(object):
+    def rotate(self,z):
+        z.reverse()
+        return z
+obj=Solution()
+num=[1,2,3,4,5]
+r=obj.rotate(num)

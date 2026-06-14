@@ -435,30 +435,30 @@ def search(self, nums, target):
 def searchRange(self, nums, target):
         list=[-1,-1]
         def first(nums,target):
-            l=0
+            i=0
             r=len(nums)-1
             ans=-1
-            while(l<=r):
-                mid=(l+r)//2
+            while(i<=r):
+                mid=(i+r)//2
                 if nums[mid] == target:
                     ans= mid
                     r=r-1
                 elif nums[mid]<target:
-                    l=mid+1
+                    =mid+1
                 else:
                     r=mid-1
             return ans
         def last(nums,target):
-            l=0
+            i=0
             r=len(nums)-1
             ans=-1
-            while(l<=r):
-                mid=(l+r)//2
+            while(i<=r):
+                mid=(i+r)//2
                 if nums[mid] == target:
                     ans= mid
-                    l=mid+1
+                    i=mid+1
                 elif nums[mid]<target:
-                    l=mid+1
+                    i=mid+1
                 else:
                     r=mid-1
             return ans
@@ -468,15 +468,15 @@ def searchRange(self, nums, target):
 print("*******************************************************")
 
 def findMin(self, nums):
-        l=0
+        i=0
         r=len(nums)-1
-        while(l<r):
-            mid=(l+r)//2
+        while(i<r):
+            mid=(i+r)//2
             if nums[mid]>nums[r]:
-                l=mid+1
+                i=mid+1
             else:
                 r=mid
-        return nums[l]
+        return nums[i]
 print("*******************************************************")
 
 class Node:
