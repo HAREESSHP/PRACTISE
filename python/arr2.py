@@ -89,3 +89,14 @@ class Solution(object):
 obj=Solution()
 num=[1,2,3,4,5]
 r=obj.rotate(num)
+
+class Solution(object):
+    def rotate(self, nums, k):
+        k = k % len(nums)
+        nums[:] = nums[-k:] + nums[:-k]
+        return nums
+
+obj = Solution()
+num = [1, 2, 3, 4, 5]
+
+print(obj.rotate(num, 2))
