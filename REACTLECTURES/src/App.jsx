@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import Card from "./assets/card.jsx";
+import Card from "./Card";
 
 function App() {
   let [count, setCount] = useState(10)
@@ -14,6 +14,42 @@ function App() {
 function reset() {
   setCount(0)
 }
+function App() {
+  const students = [
+    {
+      name: "Hari",
+      age: 21,
+      department: "CSE",
+      college: "GNI",
+    },
+    {
+      name: "Rahul",
+      age: 22,
+      department: "ECE",
+      college: "GNI",
+    },
+    {
+      name: "Priya",
+      age: 20,
+      department: "AIML",
+      college: "GNI",
+    },
+    {
+      name: "Sneha",
+      age: 21,
+      department: "IT",
+      college: "GNI",
+    },
+    {
+      name: "Arjun",
+      age: 22,
+      department: "MECH",
+      college: "GNI",
+    },
+  ];
+
+}
+
   return (
     <>
     <nav className='nav'>
@@ -34,6 +70,20 @@ function reset() {
      <button className='button' onClick={decrement}>DECREMENT</button>
      <button className='button' onClick={reset}>RESET</button>
     </div>
+     <div>
+      <h1>Student Cards</h1>
+
+      {students.map((student, index) => (
+        <Card
+          key={index}
+          name={student.name}
+          age={student.age}
+          department={student.department}
+          college={student.college}
+        />
+      ))}
+    </div>
+  );
     </>
   )
 }
