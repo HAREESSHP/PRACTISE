@@ -70,7 +70,7 @@ function App() {
      <button className='button' onClick={decrement}>DECREMENT</button>
      <button className='button' onClick={reset}>RESET</button>
     </div>
-     <div>
+        <div className="student-cards">
       <h1>Student Cards</h1>
 
       {students.map((student, index) => (
