@@ -40,3 +40,9 @@ v="aeiou"
 constcount(str,v)
 print("*************************************************")
 
+#str last word length
+def lenofLastword(str):
+    words=str.split()
+    return len(words[-1])
+str=input("Enter a string:")
+print(lenofLastword(str))
