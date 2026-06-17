@@ -46,3 +46,27 @@ def lenofLastword(str):
     return len(words[-1])
 str=input("Enter a string:")
 print(lenofLastword(str))
+
+#rev of string
+def revofstr(str):
+    words=str.split()
+    return " ".join(words[::-1])
+str=input("enter a string:")
+print(revofstr(str))
+
+#vowel and constant count
+def vowelconstcount(str):
+    vowels="aeiou"
+    vowel_count=0
+    consonant_count=0
+    for s in str:
+        if s.isalpha():
+            if s.lower() in vowels:
+                vowel_count+=1
+            else:
+                consonant_count+=1
+    return vowel_count, consonant_count
+
+str=input("enter a string:")
+vowels, consonants = vowelconstcount(str)
+print(f"Vowels: {vowels}, Consonants: {consonants}")
