@@ -70,3 +70,15 @@ def vowelconstcount(str):
 str=input("enter a string:")
 vowels, consonants = vowelconstcount(str)
 print(f"Vowels: {vowels}, Consonants: {consonants}" )
+
+#missing number
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        total=sum(nums)
+        n=len(nums)
+        expected=n*(n+1)//2
+        return expected-total
