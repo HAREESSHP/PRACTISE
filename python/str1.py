@@ -69,4 +69,4 @@ def vowelconstcount(str):
 
 str=input("enter a string:")
 vowels, consonants = vowelconstcount(str)
-print(f"Vowels: {vowels}, Consonants: {consonants}")
+print(f"Vowels: {vowels}, Consonants: {consonants}" )
