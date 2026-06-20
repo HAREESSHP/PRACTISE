@@ -96,3 +96,16 @@ class Solution(object):
                 nums[i]=1
         nums.sort()
         return nums
+
+#max repating substring
+
+    def maxRepeating(self, sequence, word):
+        """
+        :type sequence: str
+        :type word: str
+        :rtype: int
+        """
+        count=0
+        while word*(count+1) in sequence:
+            count = count+1
+        return count
