@@ -109,3 +109,17 @@ class Solution(object):
         while word*(count+1) in sequence:
             count = count+1
         return count
+
+#stones and jewels 
+    def numJewelsInStones(self, jewels, stones):
+        """
+        :type jewels: str
+        :type stones: str
+        :rtype: int
+        """
+        l=list(jewels)
+        count=0
+        for i in stones:
+            if i in l:
+                count=count+1
+        return count
