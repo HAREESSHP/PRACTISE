@@ -117,9 +117,26 @@ class Solution(object):
         :type stones: str
         :rtype: int
         """
-        l=list(jewels)
+        li=list(jewels)
         count=0
         for i in stones:
-            if i in l:
+            if i in li:
                 count=count+1
         return count
+
+
+    def removeStars(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        sta = []
+
+        for i in s:
+            if i == "*":
+                sta.pop()
+            else:
+                sta.append(i)
+
+        return "".join(sta)
+        
