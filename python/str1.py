@@ -140,3 +140,17 @@ class Solution(object):
 
         return "".join(sta)
         
+
+    def findDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        i=0
+        for x in range(1,len(nums)):
+            if nums[i] != nums[x]:
+                i=i+1
+            else:
+                break
+        return nums[i]
