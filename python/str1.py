@@ -168,3 +168,15 @@ class Solution(object):
                 count += 1
         return count
         
+
+    def hammingWeight(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        lis =bin(n)[2:]
+        count=0
+        for ch in lis:
+            if ch =="1":
+                count=count+1
+        return count
