@@ -192,3 +192,12 @@ class Solution(object):
         if len(nums)>=3:
             return nums[2]
         return nums[0]
+    
+#richest customer wealth
+    def maximumWealth(self, accounts):
+        """
+        :type accounts: List[List[int]]
+        :rtype: int
+        """
+        maximum=max(sum(row) for row in accounts)
+        return maximum
