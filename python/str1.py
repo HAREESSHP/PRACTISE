@@ -201,3 +201,15 @@ class Solution(object):
         """
         maximum=max(sum(row) for row in accounts)
         return maximum
+    
+#nth highest salary
+    def checkIfExist(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: bool
+        """
+        for i in range (len(arr)):
+            for j in range (0,len(arr)):
+                if i != j and arr[i] == 2 * arr[j]:
+                    return True
+        return False
