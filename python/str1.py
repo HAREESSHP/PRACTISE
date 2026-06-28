@@ -213,3 +213,20 @@ class Solution(object):
                 if i != j and arr[i] == 2 * arr[j]:
                     return True
         return False
+
+#reversal of the array
+    def shuffle(self, nums, n):
+        """
+        :type nums: List[int]
+        :type n: int
+        :rtype: List[int]
+        """
+        i=0
+        r=n
+        stack=[]
+        for i in range (n):
+            stack.append(nums[i])
+            stack.append(nums[r])
+            i=i+1
+            r=r+1
+        return stack
