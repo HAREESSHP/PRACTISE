@@ -230,3 +230,19 @@ class Solution(object):
             i=i+1
             r=r+1
         return stack
+    
+#continuous ones
+    def findMaxConsecutiveOnes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        i=0
+        r=0
+        for x in range(len(nums)):
+            if nums[x]==1:
+                i=i+1
+                if i>r:
+                    r=i
+            else:i=0
+        return r
