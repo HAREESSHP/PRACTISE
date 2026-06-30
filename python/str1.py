@@ -271,3 +271,24 @@ class Solution(object):
                 else:
                     r = mid - 1
         return -1
+
+
+#string strong password
+    def strongPasswordChecker(self, password):
+        """
+        :type password: str
+        :rtype: int
+        """
+        count=1
+        if len(password)>=6:
+            for i in range(len(password)-1):
+                if password[i] == password[i+1]:
+                    count=count+1
+                    if count==3:
+                        return 1
+                    else:
+                        count=1
+            return 0
+        else:
+            n=len(password)
+            return 6-n
