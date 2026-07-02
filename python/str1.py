@@ -316,3 +316,27 @@ class Solution(object):
                 left = mid + 1
 
         return left
+
+#Valid paranthasis
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        stack=[]
+        pairs = {
+            ')': '(',
+            ']': '[',
+            '}': '{'
+        }
+
+        for ch in s:
+            if ch in "([{":
+                stack.append(ch)
+            else:
+                if not stack:
+                    return False
+                top = stack.pop()
+                if top != pairs[ch]:
+                    return False
+        return len(stack) == 0
