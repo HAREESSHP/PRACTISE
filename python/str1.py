@@ -340,3 +340,24 @@ class Solution(object):
                 if top != pairs[ch]:
                     return False
         return len(stack) == 0
+
+#basketball game
+    def calPoints(self, operations):
+        """
+        :type operations: List[str]
+        :rtype: int
+        """
+        stack=[]
+        for i in range(len(operations)):
+            if operations[i]=="C":
+                stack.pop()
+            elif operations[i]=="D":
+                mul=2*stack[-1]
+                stack.append(mul)
+            elif operations[i]=="+":
+                s=stack[-1]+stack[-2]
+                stack.append(s)
+            else:
+                s=int(operations[i])
+                stack.append(s)
+        return sum(stack)
