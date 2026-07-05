@@ -41,4 +41,17 @@ print(name)
             freq[ch]-=1
 
 
-   
+#is a substring
+    def isSubsequence(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        if len(s)>len(t):
+            return False
+        i=0
+        for char in t:
+            if i<len(s) and s[i]==char:
+                i=i+1
+        return i==len(s)
