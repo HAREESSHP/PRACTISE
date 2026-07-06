@@ -55,3 +55,45 @@ print(name)
             if i<len(s) and s[i]==char:
                 i=i+1
         return i==len(s)
+
+#first and last element
+    def searchRange(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        list=[-1,-1]
+        def first(nums,target):
+            l=0
+            r=len(nums)-1
+            ans=-1
+            while(l<=r):
+                mid=(l+r)//2
+                if nums[mid] == target:
+                    ans= mid
+                    r=r-1
+                elif nums[mid]<target:
+                    l=mid+1
+                else:
+                    r=mid-1
+            return ans
+        def last(nums,target):
+            l=0
+            r=len(nums)-1
+            ans=-1
+            while(l<=r):
+                mid=(l+r)//2
+                if nums[mid] == target:
+                    ans= mid
+                    l=mid+1
+                elif nums[mid]<target:
+                    l=mid+1
+                else:
+                    r=mid-1
+            return ans
+        a=first(nums,target)
+        b=last(nums,target)
+        list[0]=a
+        list[1]=b
+        return list
