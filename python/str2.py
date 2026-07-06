@@ -97,3 +97,16 @@ print(name)
         list[0]=a
         list[1]=b
         return list
+
+#kadyens algo
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        c=nums[0]
+        m=nums[0]
+        for i in range(1,len(nums)):
+            c=max(nums[i],c+nums[i])
+            m=max(m,c)
+        return m
