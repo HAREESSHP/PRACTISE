@@ -179,3 +179,13 @@ print(name)
             if heights[i] != expected[i]:
                 count=count+1
         return count
+
+#biary addition
+    def addBinary(self, a, b):
+        """
+        :type a: str
+        :type b: str
+        :rtype: str
+        """
+        result=bin(int(a,2)+int(b,2))[2:]
+        return result
