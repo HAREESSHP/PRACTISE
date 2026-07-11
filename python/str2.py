@@ -10,7 +10,7 @@ for key,value in fre.items():
     print(f"{key}:{value}")
 print("*************************************************")
 
-                               #panagram
+#panagram
 s=input("Enter the string:")
 character=set(string.ascii_lowercase)
 s=s.lower()
