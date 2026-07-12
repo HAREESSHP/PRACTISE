@@ -191,3 +191,24 @@ print(name)
         b=int(b,2)
         result=bin(a+b)[2:]
         return result
+#relative sort array
+    def relativeSortArray(self, arr1, arr2):
+        """
+        :type arr1: List[int]
+        :type arr2: List[int]
+        :rtype: List[int]
+        """
+        max_element=max(arr1)
+        count=[0]*(max_element+1)
+        for num in arr1:
+            count[num]+=1
+        answer=[]
+        for num in arr2:
+            while count[num]>0:
+                answer.append(num)
+                count[num]-=1
+        for i in range(len(count)):
+            while count[i]>0:
+                answer.append(i)
+                count[i]-=1
+        return answer
