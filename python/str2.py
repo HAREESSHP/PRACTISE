@@ -212,3 +212,20 @@ print(name)
                 answer.append(i)
                 count[i]-=1
         return answer
+
+
+#sequential digits
+    def sequentialDigits(self, low, high):
+        """
+        :type low: int
+        :type high: int
+        :rtype: List[int]
+        """
+        s="123456789"
+        ans=[]
+        for i in range(2,10):
+            for j in range(10-i):
+                num = int(s[j:j+i])
+                if low <= num <= high:
+                    ans.append(num)
+        return ans
