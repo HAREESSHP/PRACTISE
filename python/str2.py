@@ -229,3 +229,11 @@ print(name)
                 if low <= num <= high:
                     ans.append(num)
         return ans
+
+#remove duplicates
+a=[1,2,32,12,32,32]
+b=[]
+for i in a:
+    if i not in b:
+        b.append[i]
+print(b)
