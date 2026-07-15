@@ -237,3 +237,22 @@ for i in a:
     if i not in b:
         b.append[i]
 print(b)
+
+#string password
+    def passwordStrength(self, password):
+        """
+        :type password: str
+        :rtype: int
+        """
+        s=set(password)
+        count=0
+        for ch in s:
+            if ch.isupper():
+                count=count+2
+            elif ch.islower():
+                count=count+1
+            elif ch.isdigit():
+                count=count+3
+            else:
+                count=count+5
+        return count
