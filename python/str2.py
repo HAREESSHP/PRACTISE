@@ -269,3 +269,18 @@ print(b)
                 if nums[i] == nums[j] and i < j:
                     count=count+1
         return count
+
+#lucky number
+    def findLucky(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: int
+        """
+        freq={}
+        for num in arr:
+            freq[num]=freq.get(num,0)+1
+        ans=-1
+        for num in freq:
+            if num==freq[num]:
+                ans=max(ans,num)
+        return ans
