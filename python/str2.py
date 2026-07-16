@@ -284,3 +284,15 @@ print(b)
             if num==freq[num]:
                 ans=max(ans,num)
         return ans
+#max value of a sequence
+    def minStartValue(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        prefix=0
+        min_value=0
+        for num in nums:
+            prefix+=num
+            min_value=min(prefix,min_value)
+        return 1-min_value
