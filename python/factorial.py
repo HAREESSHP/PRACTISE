@@ -24,4 +24,22 @@ print("Factorial of", n, "is", factorial(n))
             ans.append(abs(le[i]-re[i]))
         return ans
 
-        
+#Buddy string
+    def buddyStrings(self, s, goal):
+        """
+        :type s: str
+        :type goal: str
+        :rtype: bool
+        """
+        if len(s)!=len(goal):
+            return False
+        if s==goal:
+            return len(set(s))<len(s)
+        ls=[]
+        for i in range(len(s)):
+            if s[i]!=goal[i]:
+                ls.append(i)
+        if len(ls)!=2:
+            return False
+        i,j=ls
+        return s[i]==goal[j] and s[j]==goal[i]
