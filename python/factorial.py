@@ -43,3 +43,17 @@ print("Factorial of", n, "is", factorial(n))
             return False
         i,j=ls
         return s[i]==goal[j] and s[j]==goal[i]
+
+#max product
+    def maxProduct(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ls=[]
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                ls.append((nums[i]-1)*(nums[j]-1))
+        return max(ls)
+
+        
