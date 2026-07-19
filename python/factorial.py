@@ -70,4 +70,13 @@ print("Factorial of", n, "is", factorial(n))
                      count=count+1
             ans.append(count)
         return ans
-        
+#revrse array technique
+    def canBeEqual(self, target, arr):
+        """
+        :type target: List[int]
+        :type arr: List[int]
+        :rtype: bool
+        """
+        target.sort()
+        arr.sort()
+        return target == arr
