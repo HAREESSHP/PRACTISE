@@ -8,7 +8,7 @@ print("Factorial of", n, "is", factorial(n))
 
 
 #left and ryt diff
-    def leftRightDifference(self, nums):
+def leftRightDifference(self, nums):
         """
         :type nums: List[int]
         :rtype: List[int]
@@ -80,3 +80,15 @@ print("Factorial of", n, "is", factorial(n))
         target.sort()
         arr.sort()
         return target == arr
+
+#Highest altitude
+    def largestAltitude(self, gain):
+        """
+        :type gain: List[int]
+        :rtype: int
+        """
+        ans=[0]
+        for i in range(len(gain)):
+            su=ans[i]+gain[i]
+            ans.append(su)
+        return max(ans)
