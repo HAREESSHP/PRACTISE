@@ -56,4 +56,18 @@ print("Factorial of", n, "is", factorial(n))
                 ls.append((nums[i]-1)*(nums[j]-1))
         return max(ls)
 
+#smallest elements in an array
+    def smallerNumbersThanCurrent(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ans=[]
+        for i in range(len(nums)):
+            count=0
+            for j in range(len(nums)):
+                    if nums[i]>nums[j]:
+                     count=count+1
+            ans.append(count)
+        return ans
         
