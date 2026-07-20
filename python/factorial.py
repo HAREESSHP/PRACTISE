@@ -125,3 +125,24 @@ def leftRightDifference(self, nums):
         for word in words:
             res.append(word[::-1])
         return " ".join(res)
+
+#Sum of Square Numbers
+    def judgeSquareSum(self, c):
+        """
+        :type c: int
+        :rtype: bool
+        """
+        for a in range(int(c ** 0.5) + 1):
+            b = c - a * a
+            left = 0
+            right = int(b ** 0.5)
+            while left <= right:
+                mid = (left + right) // 2
+                square = mid * mid
+                if square == b:
+                    return True
+                elif square < b:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+        return False
