@@ -113,3 +113,15 @@ def leftRightDifference(self, nums):
             ans = max(ans, max_p)
 
         return ans
+
+#Reverse words in a string
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        words=s.split()
+        res=[]
+        for word in words:
+            res.append(word[::-1])
+        return " ".join(res)
