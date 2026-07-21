@@ -161,3 +161,15 @@ def leftRightDifference(self, nums):
                 num=num-1
                 count=count+1
         return count
+
+#ptriangle
+    def getRow(self, rowIndex):
+        """
+        :type rowIndex: int
+        :rtype: List[int]
+        """
+        row=[1]
+        for j in range(1,rowIndex+1):
+            k=row[-1]*(rowIndex - j+ 1) // j
+            row.append(k)
+        return row
