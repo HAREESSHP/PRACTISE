@@ -201,3 +201,20 @@ def leftRightDifference(self, nums):
                         ans = sub
 
         return ans
+
+#k-beauty
+    def divisorSubstrings(self, num, k):
+        """
+        :type num: int
+        :type k: int
+        :rtype: int
+        """
+        nums = str(num)
+        count = 0
+        for i in range(len(nums) - k + 1):
+            z = 0
+            for j in range(i, i + k):
+                z = z * 10 + int(nums[j])
+            if z != 0 and num % z == 0:
+                count += 1
+        return count
