@@ -173,3 +173,31 @@ def leftRightDifference(self, nums):
             k=row[-1]*(rowIndex - j+ 1) // j
             row.append(k)
         return row
+
+#longest substing repetative
+    def longestNiceSubstring(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        if len(s)<=1:
+            return ""
+        ans = ""
+        for i in range(len(s)):
+            for j in range(i + 1, len(s) + 1):
+                sub = s[i:j]
+                flag = True
+                for ch in sub:
+                    if ch.islower():
+                        if ch.upper() not in sub:
+                            flag = False
+                            break
+                    else:
+                        if ch.lower() not in sub:
+                            flag = False
+                            break
+                if flag:
+                    if len(sub) > len(ans):
+                        ans = sub
+
+        return ans
