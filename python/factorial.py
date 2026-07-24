@@ -236,3 +236,26 @@ def leftRightDifference(self, nums):
             return ans
         
         return 1 / ans 
+
+#trapping rain water
+    def trap(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        l=0
+        r=len(height)-1
+        l1=0
+        r2=0
+        ans=0
+        while l<r:
+            if height[l]<=height[r]:
+                l1=max(l1,height[l])
+                ans+=l1-height[l]
+                l+=1
+            else:
+                r2=max(r2,height[r])
+                ans+=r2-height[r]
+                r-=1
+        return ans
+        
