@@ -258,4 +258,22 @@ def leftRightDifference(self, nums):
                 ans+=r2-height[r]
                 r-=1
         return ans
+    
+#Max of a digit
+    def maxProduct(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        li=[]
+        while (n>0):
+            s=n%10
+            li.append(s)
+            n=n//10
+        ans=0
+        for i in range(len(li)):
+           for j in range(i + 1, len(li)):
+                ans = max(ans, li[i] * li[j])
+        return ans
+
         
