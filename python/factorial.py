@@ -297,4 +297,15 @@ def leftRightDifference(self, nums):
             p += 1
 
         return sum(prime)
+#Max of 3 numbers 
+    def maximumProduct(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        return max(
+            nums[-1] * nums[-2] * nums[-3],
+            nums[0] * nums[1] * nums[-1]
+        )
    
