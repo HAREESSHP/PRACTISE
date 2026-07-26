@@ -308,4 +308,19 @@ def leftRightDifference(self, nums):
             nums[-1] * nums[-2] * nums[-3],
             nums[0] * nums[1] * nums[-1]
         )
-   
+
+#Middle index of an array
+    def findMiddleIndex(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        total=sum(nums)
+        ls=0
+        rs=0
+        for i in range(len(nums)):
+            rs=total-ls-nums[i]
+            if ls==rs:
+                return i
+            ls=ls+nums[i]
+        return -1
