@@ -347,3 +347,14 @@ def leftRightDifference(self, nums):
         """
         nums.sort()
         return (nums[-1]-1)*(nums[-2]-1)
+
+#single number using xor
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ans = 0
+        for num in nums:
+            ans ^= num
+        return ans
