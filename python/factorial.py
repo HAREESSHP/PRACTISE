@@ -376,3 +376,24 @@ def leftRightDifference(self, nums):
             if freq[ch]%2==1:
                 middle = middle+ch
         return left+middle+left[::-1]
+
+#max vowels in a substring
+    def maxVowels(self, s, k):
+        """
+        :type s: str
+        :type k: int
+        :rtype: int
+        """
+        count=0
+        vowels="aeiou"
+        for i in range(0,k):
+            if s[i] in vowels:
+                count=count+1
+            vc=count
+        for i in range(k,len(s)):
+            if s[i] in vowels:
+                count=count+1
+            if s[i-k] in vowels:
+                count=count-1
+            vc=max(vc,count)
+        return vc
