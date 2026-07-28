@@ -358,3 +358,21 @@ def leftRightDifference(self, nums):
         for num in nums:
             ans ^= num
         return ans
+#smallest palindrome
+    def smallestPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        if (len(s)==1):
+            return s
+        freq={}
+        left=""
+        middle=""
+        for ch in s:
+            freq[ch]=freq.get(ch,0)+1
+        for ch in sorted(freq):
+            left=left+ch*(freq[ch]//2)
+            if freq[ch]%2==1:
+                middle = middle+ch
+        return left+middle+left[::-1]
