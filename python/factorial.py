@@ -397,3 +397,19 @@ def leftRightDifference(self, nums):
                 count=count-1
             vc=max(vc,count)
         return vc
+
+#max average of a subarray
+    def findMaxAverage(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: float
+        """
+        s=0
+        for i in range(0,k):
+            s=s+nums[i]
+        cs=s
+        for i in range(k,len(nums)):
+            s=s+nums[i]-nums[i-k]
+            cs=max(s,cs)
+        return float(cs)/k
