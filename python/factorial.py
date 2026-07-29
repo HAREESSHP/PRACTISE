@@ -434,3 +434,24 @@ def leftRightDifference(self, nums):
             return 0
         else:
             return ans
+
+#Max contiguous subarray sum
+    def longestOnes(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        left=0
+        zerocount=0
+        ans=0
+        for i in range(len(nums)):
+            if nums[i]==0:
+                zerocount=zerocount+1
+            while zerocount>k:
+                if nums[left]==0:
+                    zerocount=zerocount-1
+                left=left+1
+            ans=max(ans,i-left+1)
+        return ans
+        
