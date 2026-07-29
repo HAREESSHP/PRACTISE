@@ -413,3 +413,24 @@ def leftRightDifference(self, nums):
             s=s+nums[i]-nums[i-k]
             cs=max(s,cs)
         return float(cs)/k
+
+#minimum size sub array
+    def minSubArrayLen(self, target, nums):
+        """
+        :type target: int
+        :type nums: List[int]
+        :rtype: int
+        """
+        total=0
+        left=0
+        ans=float('inf')
+        for i in range(len(nums)):
+            total=total+nums[i]
+            while(total>=target):
+                ans=min(ans,i-left+1)
+                total -= nums[left]
+                left=left+1
+        if ans==float('inf'):
+            return 0
+        else:
+            return ans
