@@ -454,4 +454,25 @@ def leftRightDifference(self, nums):
                 left=left+1
             ans=max(ans,i-left+1)
         return ans
-        
+    
+#Fruit Into Baskets
+    def totalFruit(self, fruits):
+        """
+        :type fruits: List[int]
+        :rtype: int
+        """
+        count={}
+        l=0
+        max_len = 0
+        for i in range(len(fruits)):
+            if fruits[i] in count:
+                count[fruits[i]]+=1
+            else:
+                count[fruits[i]]=1
+            while len(count)>2:
+                count[fruits[l]]-=1
+                if count[fruits[l]]==0:
+                    del count[fruits[l]]
+                l+=1
+            max_len = max(max_len, i - l + 1)
+        return max_len
