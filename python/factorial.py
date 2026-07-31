@@ -476,3 +476,18 @@ def leftRightDifference(self, nums):
                 l+=1
             max_len = max(max_len, i - l + 1)
         return max_len
+
+#Product of Array Except Self
+    def productExceptSelf(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ans=[1]*len(nums)
+        rp=1
+        for  i in range(1,len(nums)):
+            ans[i]=nums[i-1]*ans[i-1]
+        for i in range(len(nums)-1,-1,-1):
+            ans[i]*=rp
+            rp*=nums[i]
+        return ans
