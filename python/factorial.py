@@ -507,3 +507,16 @@ def leftRightDifference(self, nums):
             stack.append(i)
         return ans
         
+#Minimum number game
+    def numberGame(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        nums.sort()
+        for i in range(0,len(nums),2):
+            if nums[i]<nums[i+1]:
+                temp=nums[i]
+                nums[i]=nums[i+1]
+                nums[i+1]=temp
+        return nums
