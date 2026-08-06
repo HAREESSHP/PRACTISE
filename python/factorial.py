@@ -520,3 +520,23 @@ def leftRightDifference(self, nums):
                 nums[i]=nums[i+1]
                 nums[i+1]=temp
         return nums
+
+#smallest number with given product
+    def smallestNumber(self, n, t):
+        """
+        :type n: int
+        :type t: int
+        :rtype: int
+        """
+        number=0
+        while True:
+            number = n
+            product = 1
+            while(number>0):
+                product=product*(number%10)
+                number=number/10
+            if product%t==0:
+                return n
+                break
+            n=n+1
+        return -1
