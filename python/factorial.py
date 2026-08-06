@@ -540,3 +540,15 @@ def leftRightDifference(self, nums):
                 break
             n=n+1
         return -1
+
+#sum of multiples of 3,5,7
+    def sumOfMultiples(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        sum=0
+        for i in range(1,n+1):
+            if i % 3==0 or i%5==0 or i%7==0:
+                sum=sum+i
+        return sum
