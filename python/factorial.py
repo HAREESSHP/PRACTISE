@@ -552,3 +552,16 @@ def leftRightDifference(self, nums):
             if i % 3==0 or i%5==0 or i%7==0:
                 sum=sum+i
         return sum
+
+#missing numbers in an array
+    def findMissingElements(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ans=[]
+        nums.sort()
+        for i in range(nums[0],nums[-1]):
+            if i not in nums:
+                ans.append(i)
+        return ans
