@@ -15,3 +15,14 @@ __import__("atexit").register(lambda: open("display_runtime.txt", "w").write("0"
         
 solution = Solution()
 print(solution.reverse(-123))  # Output: -321
+
+
+#Plus one
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        n=int("".join(map(str,digits)))
+        n=n+1
+        return list(map(int,str(n)))
