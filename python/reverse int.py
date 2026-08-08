@@ -26,3 +26,16 @@ print(solution.reverse(-123))  # Output: -321
         n=int("".join(map(str,digits)))
         n=n+1
         return list(map(int,str(n)))
+
+
+#rich customer
+    def maximumWealth(self, accounts):
+        """
+        :type accounts: List[List[int]]
+        :rtype: int
+        """
+        m=0
+        for customer in accounts:
+            if sum(customer)>m:
+                m=sum(customer)
+        return m
