@@ -52,3 +52,12 @@ print(solution.reverse(-123))  # Output: -321
             if r-left+1==k:
                 ans=min(ans,nums[r]-nums[left])
         return ans
+
+#max product between two pairs
+    def maxProductDifference(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        return nums[-1] * nums[-2] - nums[0] * nums[1]
