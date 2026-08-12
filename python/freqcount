@@ -1,0 +1,5 @@
+li=[12,1,12,3,2,1,2]
+freq={}
+for i in li:
+    freq[i]=freq.get(i,0)+1
+print(freq)
