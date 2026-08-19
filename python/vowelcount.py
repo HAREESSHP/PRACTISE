@@ -44,7 +44,6 @@ class Solution(object):
             for x in nums:
                 if count[x] == 1:
                     ans = max(ans, x)
-
             return ans
         if k == n:
             return max(nums)
