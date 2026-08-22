@@ -78,3 +78,19 @@ class Solution(object):
             if absent >= 2 or late >= 3:
                 return False
         return True
+
+#Digit sum and product problem
+    def checkDivisibility(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        p=1
+        s=0
+        x=n
+        while x>0:
+            digit=x%10
+            s+=digit
+            p*=digit
+            x=x//10
+        return n%(s+p)==0
