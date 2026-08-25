@@ -94,3 +94,15 @@ class Solution(object):
             p*=digit
             x=x//10
         return n%(s+p)==0
+
+#smalest multiple missing
+    def missingMultiple(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        s = k
+        while s in nums:
+            s += k
+        return s
