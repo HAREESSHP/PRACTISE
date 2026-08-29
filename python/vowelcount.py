@@ -65,7 +65,6 @@ class Solution(object):
         """
         absent = 0
         late = 0
-
         for ch in s:
             if ch == 'A':
                 absent += 1
@@ -101,14 +100,12 @@ class Solution(object):
         :type nums: List[int]
         :type k: int
         :rtype: int
-        """
+         """
         s = k
         while s in nums:
             s += k
         return s
-
 from collections import deque
-
 class RecentCounter:
     def __init__(self):
         self.queue=deque()
