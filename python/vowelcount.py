@@ -105,7 +105,7 @@ class Solution(object):
         while s in nums:
             s += k
         return s
-from collections import deque
+from collections import Counter, deque
 class RecentCounter:
     def __init__(self):
         self.queue=deque()
@@ -132,4 +132,33 @@ class RecentCounter:
                 ans = ans - roman[s[i]]
             else:
                 ans = ans + roman[s[i]]
+        return ans
+
+#Largest integer with unique occurrence
+    def largestInteger(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        n = len(nums)
+        if k == 1:
+            count = Counter(nums)
+            ans = -1
+
+            for x in nums:
+                if count[x] == 1:
+                    ans = max(ans, x)
+
+            return ans
+        if k == n:
+            return max(nums)
+        count = Counter(nums)
+        ans = -1
+        if count[nums[0]] == 1:
+            ans = max(ans, nums[0])
+
+        if count[nums[-1]] == 1:
+            ans = max(ans, nums[-1])
+
         return ans
