@@ -145,11 +145,9 @@ class RecentCounter:
         if k == 1:
             count = Counter(nums)
             ans = -1
-
             for x in nums:
                 if count[x] == 1:
                     ans = max(ans, x)
-
             return ans
         if k == n:
             return max(nums)
