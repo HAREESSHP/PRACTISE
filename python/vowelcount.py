@@ -136,11 +136,6 @@ class RecentCounter:
 
 #Largest integer with unique occurrence
     def largestInteger(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
         n = len(nums)
         if k == 1:
             count = Counter(nums)
