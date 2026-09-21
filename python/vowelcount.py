@@ -171,3 +171,18 @@ class Solution:
                 ans.append(str(i))
 
         return ans
+
+
+#Reverse Degree
+    def reverseDegree(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        ans=0
+        for i in range(1,len(s)+1):
+            ch=s[i-1]
+            rv=26-(ord(ch)-ord('a'))
+            ans=ans+(rv*i)
+        return ans
+        
