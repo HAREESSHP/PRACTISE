@@ -105,7 +105,7 @@ class Solution(object):
         while s in nums:
             s += k
         return s
-from collections import Counter, deque
+
 class RecentCounter:
     def __init__(self):
         self.queue=deque()
