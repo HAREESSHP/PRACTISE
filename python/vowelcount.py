@@ -185,9 +185,7 @@ class Solution:
             rv=26-(ord(ch)-ord('a'))
             ans=ans+(rv*i)
         return ans
-        
-
-a=5
+n=int(input("Enter a number:"))
 fact=1
 for i in range(1,5+1):
     fact=fact*i
