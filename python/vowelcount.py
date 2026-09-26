@@ -171,8 +171,7 @@ class Solution:
                 ans.append(str(i))
 
         return ans
-
-
+        
 #Reverse Degree
     def reverseDegree(self, s):
         """
