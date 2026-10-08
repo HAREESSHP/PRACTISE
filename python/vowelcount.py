@@ -189,3 +189,38 @@ fact=1
 for i in range(1,5+1):
     fact=fact*i
 print(fact)
+
+n=int(input())
+for i in range(2,n//2+1):
+    if (n%i==0):
+        print("Not Prime")
+        break
+    else:
+        print("Prime")
+
+n=int(input())
+for num in range(2,n):
+    isprime=True
+    for i in range(2,num):
+        if num%i==0:
+            isprime=False
+            break
+    if(isprime):
+        print(num)
+
+n=int(input())
+count=0
+num=2
+while(count<n):
+    prime= True
+    for i in range(2,num):
+        if(num%i==0):
+            prime=False
+            break
+    if(prime):
+        print(num)
+        count+=1
+    if(count==n):
+        print(num)
+        break
+    num+=1
